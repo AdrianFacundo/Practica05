@@ -1,0 +1,157 @@
+body{
+    background-color: #263238;
+    color: #ddd;
+    font-family: courier;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1{
+    font-size: 20pX;
+    font-weight: normal;
+    font-family: 'Righteous';
+    color: aqua;
+    text-align: center;
+}
+
+#grid{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#grid tr td{
+    border: 1px solid #fff;
+    background-color: #999;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+#grid tr td.active{
+    background-color: #333;
+}
+
+#grid tr td.mine{
+    background-color: #d84315;
+}
+
+button{
+    margin: 12px 0;
+    padding: 4px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.button-R-pushable {
+    position: relative;
+    margin-top: 20px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-R-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-R-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to left,
+            hsl(340deg 100% 16%) 0%,
+            hsl(340deg 100% 32%) 8%,
+            hsl(340deg 100% 32%) 92%,
+            hsl(340deg 100% 16%) 100%);
+}
+
+.button-R-front {
+    display: block;
+    position: relative;
+    padding: 12px 27px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: white;
+    background: hsl(345deg 100% 47%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.button-R-pushable:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.button-R-pushable:hover .button-R-front {
+    transform: translateY(-6px);
+    transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-R-pushable:active .button-R-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.button-R-pushable:hover .button-R-shadow {
+    transform: translateY(4px);
+    transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.button-R-pushable:active .button-R-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.button-R-pushable:focus:not(:focus-visible) {
+    outline: none;
+}
+.contenedor-header {
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.contenedor-header header .logo a {
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: aqua;
+    text-decoration: none;
+}
